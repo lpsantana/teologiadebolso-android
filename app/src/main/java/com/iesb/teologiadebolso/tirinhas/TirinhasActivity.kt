@@ -1,12 +1,13 @@
-package com.iesb.teologiadebolso
+package com.iesb.teologiadebolso.tirinhas
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.iesb.teologiadebolso.R
 
-class MainActivity : AppCompatActivity() {
+class TirinhasActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.tirinhas)
     }
 }
