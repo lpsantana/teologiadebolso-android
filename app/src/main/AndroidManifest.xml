@@ -11,7 +11,7 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".CadastraActivity">
+        <activity android:name=".activities.cadastro.CadastraActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -19,11 +19,11 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".splashscreen.SplashScreen"
+                android:name="com.iesb.teologiadebolso.activities.splashscreen.SplashScreen"
                 android:label="@string/title_activity_splash_screen"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name=".tirinhas.TirinhasActivity">
+        <activity android:name="com.iesb.teologiadebolso.activities.tirinhas.TirinhasActivity">
 
         </activity>
     </application>

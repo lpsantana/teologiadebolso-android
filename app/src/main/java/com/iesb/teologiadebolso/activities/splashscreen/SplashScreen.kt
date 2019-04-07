@@ -1,4 +1,4 @@
-package com.iesb.teologiadebolso.splashscreen
+package com.iesb.teologiadebolso.activities.splashscreen
 
 import android.os.Bundle
 import android.support.design.widget.Snackbar
