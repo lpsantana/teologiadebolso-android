@@ -4,4 +4,9 @@
     <string name="email">E-mail</string>
     <string name="cadastrar">Cadastrar</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="password">Password</string>
+    <string name="ok">OK</string>
+    <string name="warning">Atenção</string>
+    <string name="add_user_invalid_values">Dados inválidos! Verifique e tente novamente.</string>
+    <string name="add_user_retry_add">Não foi possível criar usuário! Tente novamente mais tarde.</string>
 </resources>
