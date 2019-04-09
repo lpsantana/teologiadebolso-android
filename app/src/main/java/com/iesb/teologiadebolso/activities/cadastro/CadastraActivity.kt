@@ -44,7 +44,9 @@ class CadastraActivity : AppCompatActivity(), CadastraListener.View, View.OnClic
     }
 
     override fun nextView() {
-        startActivity(Intent(this, TirinhasActivity::class.java))
+        val intent = Intent(this, TirinhasActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
         finish()
     }
 

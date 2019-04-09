@@ -1,6 +1,6 @@
 package com.iesb.teologiadebolso.listener
 
-interface CreateUserListener {
+interface FirebaseListener {
     fun onSuccess(email: String)
     fun onFail()
 }

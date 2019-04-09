@@ -11,6 +11,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".activities.recuperasenha.RecuperaSenhaActivity">
+        </activity>
+        <activity android:name=".activities.login.LoginActivity">
+        </activity>
         <activity android:name=".activities.cadastro.CadastraActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -19,12 +23,11 @@
             </intent-filter>
         </activity>
         <activity
-                android:name="com.iesb.teologiadebolso.activities.splashscreen.SplashScreen"
+                android:name=".activities.splashscreen.SplashScreen"
                 android:label="@string/title_activity_splash_screen"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity android:name="com.iesb.teologiadebolso.activities.tirinhas.TirinhasActivity">
-
+        <activity android:name=".activities.tirinhas.TirinhasActivity">
         </activity>
     </application>
 

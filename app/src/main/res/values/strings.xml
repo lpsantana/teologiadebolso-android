@@ -9,4 +9,5 @@
     <string name="warning">Atenção</string>
     <string name="add_user_invalid_values">Dados inválidos! Verifique e tente novamente.</string>
     <string name="add_user_retry_add">Não foi possível criar usuário! Tente novamente mais tarde.</string>
+    <string name="login_invalid_values">E-mail ou senha inválidos!</string>
 </resources>

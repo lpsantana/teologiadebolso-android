@@ -1,12 +1,12 @@
 package com.iesb.teologiadebolso.activities.cadastro
 
 import android.content.Context
-import com.iesb.teologiadebolso.listener.CreateUserListener
+import com.iesb.teologiadebolso.listener.FirebaseListener
 
 interface CadastraListener {
 
     interface Model {
-        fun createUser(email: String, password: String, listener: CreateUserListener)
+        fun createUser(email: String, password: String, listener: FirebaseListener)
         fun saveUser(email: String)
     }
 
