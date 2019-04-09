@@ -4,13 +4,14 @@ import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.iesb.teologiadebolso.R
 import com.iesb.teologiadebolso.activities.cadastro.CadastraActivity
 import com.iesb.teologiadebolso.activities.recuperasenha.RecuperaSenhaActivity
 import com.iesb.teologiadebolso.activities.tirinhas.TirinhasActivity
 import com.iesb.teologiadebolso.util.DialogUtil
 
-class LoginActivity : AppCompatActivity(), LoginListener.View {
+class LoginActivity : AppCompatActivity(), LoginListener.View, View.OnClickListener {
     private lateinit var presenter: LoginListener.Presenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +20,15 @@ class LoginActivity : AppCompatActivity(), LoginListener.View {
 
         presenter = LoginPresenter(this)
         presenter.initContent()
+//        button_login.setOnClickListener(this)
+    }
+
+    override fun onClick(view: View?) {
+        when(view?.id){
+            R.id.button_add -> {
+//                presenter.onLoginPressed(email_login.text.toString(), password_login.text.toString())
+            }
+        }
     }
 
     override fun getContext(): Context {
