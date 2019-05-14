@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "586587176446",
+    "firebase_url": "https://teologiadebolso-7f598.firebaseio.com",
+    "project_id": "teologiadebolso-7f598",
+    "storage_bucket": "teologiadebolso-7f598.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:586587176446:android:675ff8115e8b886f",
+        "android_client_info": {
+          "package_name": "com.iesb.teologiadebolso"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN6pcDYslCgp0yQEZ6KNDfQmb6vTeV6lQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "586587176446-bk7jj3mggkien3dlkjrlu5as0ueftmr8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
