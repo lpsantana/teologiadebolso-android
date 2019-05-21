@@ -1,6 +1,8 @@
 package com.iesb.teologiadebolso.activities.login
 
 import android.app.Activity
+import android.content.Context
+import android.view.inputmethod.InputMethodManager
 import com.iesb.teologiadebolso.R
 import com.iesb.teologiadebolso.listener.FirebaseListener
 import com.iesb.teologiadebolso.util.Validator
