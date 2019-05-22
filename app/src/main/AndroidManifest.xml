@@ -11,8 +11,14 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".activities.onboarding.OnboardingActivity">
+        <activity android:name=".activities.onboarding.OnboardingActivity"
+        android:theme="@style/FullScreen"
+        android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity
                 android:name=".activities.recuperasenha.RecuperaSenhaActivity"
@@ -29,12 +35,7 @@
         <activity
                 android:name=".activities.splashscreen.SplashScreen"
                 android:label="@string/title_activity_splash_screen"
-                android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
+                android:theme="@style/FullScreen">
         </activity>
         <activity android:name=".activities.tirinhas.TirinhasActivity">
         </activity>
