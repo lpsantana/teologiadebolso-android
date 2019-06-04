@@ -22,10 +22,12 @@ class OnBoardingPresenter(private val view: OnBoardingListener.View,
     override fun changeBoarding(direction: Int) {
         changeIconPage(direction)
         val board = model.getBoardByIndex(step)
+        view.mudarParaInvisivel()
         view.printTitulo(board.titulo)
         view.printDescricao(board.descricao)
         view.printIcon(board.imgicon)
         view.printImage(board.img)
+        view.animacao()
     }
 
     private fun changeIconPage(direction: Int) {

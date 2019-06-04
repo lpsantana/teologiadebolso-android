@@ -13,6 +13,8 @@ interface OnBoardingListener{
         fun printDescricao(descricao: String)
         fun printImage(img: Int)
         fun printIcon(img: Int)
+        fun animacao()
+        fun mudarParaInvisivel()
     }
 
     interface Presenter {

@@ -2,6 +2,7 @@ package com.iesb.teologiadebolso.activities.onboarding
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
@@ -34,34 +35,74 @@ class OnboardingActivity : AppCompatActivity(), OnBoardingListener.View,View.OnC
 
     override fun printIconPage(index: Int, shape: Int) {
         listIcons?.get(index)?.setImageResource(shape)
-        val animation = getAnimacao(0f, 1f, 1000)
-        img_icone.startAnimation(animation)
-        animation.start()
     }
 
     override fun printTitulo(titulo: String) {
         txt_titulo.text = titulo
-        val animation = getAnimacao(0f, 1f, 500)
-        txt_titulo.startAnimation(animation)
-        animation.start()
     }
 
     override fun printDescricao(descricao: String) {
         txt_descricao.text = descricao
-        val animation = getAnimacao(0f, 1f, 750)
-        txt_descricao.startAnimation(animation)
-        animation.start()
     }
 
     override fun printImage(img: Int) {
         img_imagem.setBackgroundResource(img)
-        val animacao = getAnimacao(0.2f, 1f, 1500)
-        img_imagem.startAnimation(animacao)
-        animacao.start()
     }
 
     override fun printIcon(img: Int) {
         img_icone.setBackgroundResource(img)
+    }
+
+    override fun animacao() {
+        val animacao = getAnimacao(0.1f, 1f, 1000)
+        animacao.setAnimationListener(object : Animation.AnimationListener {
+            override fun onAnimationRepeat(p0: Animation?) {
+            }
+
+            override fun onAnimationStart(p0: Animation?) {
+                Handler().postDelayed({
+                    val animation = getAnimacao(0f, 1f, 800)
+                    animation.setAnimationListener(object : Animation.AnimationListener {
+                        override fun onAnimationRepeat(p0: Animation?) {
+                        }
+
+                        override fun onAnimationEnd(p0: Animation?) {
+                        }
+
+                        override fun onAnimationStart(p0: Animation?) {
+                            Handler().postDelayed({
+                                val animation = getAnimacao(0f, 1f, 900)
+                                txt_titulo.visibility = View.VISIBLE
+                                txt_titulo.startAnimation(animation)
+                                animation.start()
+
+                                val animacao = getAnimacao(0f, 1f, 1500)
+                                txt_descricao.visibility = View.VISIBLE
+                                txt_descricao.startAnimation(animacao)
+                                animacao.start()
+                            }, 300)
+                        }
+
+                    })
+                    img_icone.visibility = View.VISIBLE
+                    img_icone.startAnimation(animation)
+                    animation.start()
+                }, 300)
+            }
+
+            override fun onAnimationEnd(p0: Animation?) {
+            }
+        })
+        img_imagem.visibility = View.VISIBLE
+        img_imagem.startAnimation(animacao)
+        animacao.start()
+    }
+
+    override fun mudarParaInvisivel() {
+        img_imagem.visibility = View.INVISIBLE
+        img_icone.visibility = View.INVISIBLE
+        txt_titulo.visibility = View.INVISIBLE
+        txt_descricao.visibility = View.INVISIBLE
     }
 
     private fun getAnimacao(start: Float, end: Float, time: Long): Animation{
