@@ -1,5 +1,7 @@
 package com.iesb.teologiadebolso.activities.onboarding
 
+import android.content.Context
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -8,6 +10,7 @@ import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.widget.ImageView
 import com.iesb.teologiadebolso.R
+import com.iesb.teologiadebolso.activities.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_onboarding.*
 
 class OnboardingActivity : AppCompatActivity(), OnBoardingListener.View,View.OnClickListener {
@@ -24,12 +27,14 @@ class OnboardingActivity : AppCompatActivity(), OnBoardingListener.View,View.OnC
         listIcons = arrayListOf(icones_1, icones_2, icones_3, icones_4, icones_5)
         direita.setOnClickListener(this)
         esquerda.setOnClickListener(this)
+        btn_pular.setOnClickListener(this)
     }
 
     override fun onClick(view: View?) {
         when(view?.id){
             R.id.direita -> presenter.changeBoarding(presenter.RIGHT)
             R.id.esquerda -> presenter.changeBoarding(presenter.LEFT)
+            R.id.btn_pular -> presenter.pular()
         }
     }
 
@@ -109,6 +114,15 @@ class OnboardingActivity : AppCompatActivity(), OnBoardingListener.View,View.OnC
         val animation = AlphaAnimation(start, end)
         animation.duration = time
         return animation
+    }
+
+    override fun nextView() {
+        startActivity(Intent(this, LoginActivity::class.java))
+        finish()
+    }
+
+    override fun getContext(): Context {
+        return this
     }
 
 }

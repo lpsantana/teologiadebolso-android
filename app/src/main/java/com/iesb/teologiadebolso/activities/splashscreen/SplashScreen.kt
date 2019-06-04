@@ -6,6 +6,8 @@ import android.os.Handler
 import android.support.v7.app.AppCompatActivity
 import com.iesb.teologiadebolso.R
 import com.iesb.teologiadebolso.activities.login.LoginActivity
+import com.iesb.teologiadebolso.activities.onboarding.OnboardingActivity
+import com.iesb.teologiadebolso.preference.UserPreference
 
 class SplashScreen : AppCompatActivity() {
 
@@ -15,7 +17,12 @@ class SplashScreen : AppCompatActivity() {
     internal val mRunnable: Runnable = Runnable {
         if (!isFinishing) {
 
-            val intent = Intent(applicationContext, LoginActivity::class.java)
+            var intent: Intent? = null
+            if(!UserPreference(this).onboardingViewed()){
+                intent = Intent(applicationContext, OnboardingActivity::class.java)
+            }else{
+                intent = Intent(applicationContext, LoginActivity::class.java)
+            }
             startActivity(intent)
             finish()
         }

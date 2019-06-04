@@ -1,7 +1,6 @@
 package com.iesb.teologiadebolso.activities.onboarding
 
 import com.iesb.teologiadebolso.R
-import kotlinx.android.synthetic.main.activity_onboarding.*
 
 class OnBoardingPresenter(private val view: OnBoardingListener.View,
                           private val model: OnBoardingModel = OnBoardingModel(),
@@ -59,6 +58,11 @@ class OnBoardingPresenter(private val view: OnBoardingListener.View,
         }
         view.printIconPage(last, R.drawable.onboarding_pager_circle_icon)
         view.printIconPage(next, R.drawable.onboarding_pager_round_icon)
+    }
+
+    override fun pular() {
+        model.salvar(view.getContext())
+        view.nextView()
     }
 
 }

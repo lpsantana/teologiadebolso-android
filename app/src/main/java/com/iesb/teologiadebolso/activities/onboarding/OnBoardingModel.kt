@@ -1,9 +1,11 @@
 package com.iesb.teologiadebolso.activities.onboarding
 
+import android.content.Context
 import com.iesb.teologiadebolso.R
 import com.iesb.teologiadebolso.model.Board
+import com.iesb.teologiadebolso.preference.UserPreference
 
-class OnBoardingModel: OnBoardingListener.Model{
+class OnBoardingModel(): OnBoardingListener.Model{
     private val boards: ArrayList<Board> = boards()
 
     override fun getBoardByIndex(index: Int): Board {
@@ -22,5 +24,9 @@ class OnBoardingModel: OnBoardingListener.Model{
                 , R.drawable.board_icon_04, R.drawable.board_img_04),
             Board("História da Igreja", "Linha do tempo interativa para \nacompanhar os acontecimentos " +
                     "\nhistóricos da Igreja até os dias atuais", R.drawable.board_icon_05, R.drawable.board_img_05))
+    }
+
+    override fun salvar(context: Context) {
+        UserPreference(context).saveOnBoarding()
     }
 }

@@ -14,11 +14,6 @@
         <activity android:name=".activities.onboarding.OnboardingActivity"
         android:theme="@style/FullScreen"
         android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity
                 android:name=".activities.recuperasenha.RecuperaSenhaActivity"
@@ -36,6 +31,11 @@
                 android:name=".activities.splashscreen.SplashScreen"
                 android:label="@string/title_activity_splash_screen"
                 android:theme="@style/FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".activities.tirinhas.TirinhasActivity">
         </activity>

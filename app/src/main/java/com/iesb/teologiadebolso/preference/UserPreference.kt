@@ -6,6 +6,7 @@ import android.content.SharedPreferences
 class UserPreference(private val context: Context) {
     private val FILE_NAME = "com.iesb.teologiadebolso.preference"
     private val USER_LOGIN_KEY = "USER_LOGIN_KEY"
+    private val ONBOARDING = "ONBOARDING"
     private lateinit var preference: SharedPreferences
     private lateinit var editor: SharedPreferences.Editor
 
@@ -33,5 +34,14 @@ class UserPreference(private val context: Context) {
     fun logout(){
         editor.clear()
         editor.commit()
+    }
+
+    fun saveOnBoarding(){
+        editor.putBoolean(ONBOARDING, true)
+        editor.commit()
+    }
+
+    fun onboardingViewed():Boolean{
+        return preference.getBoolean(ONBOARDING, false)
     }
 }
