@@ -1,7 +1,6 @@
 package com.iesb.teologiadebolso.activities.cadastro
 
 import android.app.Activity
-import android.util.Patterns
 import com.iesb.teologiadebolso.R
 import com.iesb.teologiadebolso.listener.FirebaseListener
 import com.iesb.teologiadebolso.util.Validator

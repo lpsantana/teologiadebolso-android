@@ -5,6 +5,41 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.recuperasenha.RecuperaSenhaActivity">
+        tools:context=".activities.recuperasenha.RecuperaSenhaListener">
 
+    <TextView
+            android:text="@string/label_recuperar_senha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/label_recuperar"
+            android:layout_marginTop="52dp"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="32dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="32dp"
+            android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            tools:text="@string/label_recuperar_senha"
+    />
+    <Button
+            android:layout_width="104dp"
+            android:layout_height="42dp"
+            android:id="@+id/button_recuperar"
+            tools:text="@string/recuperar" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="0.498"
+            android:text="@string/recuperar"
+            android:layout_marginTop="44dp" app:layout_constraintTop_toBottomOf="@+id/editText_email_recuperacao"/>
+    <EditText
+            android:layout_width="370dp"
+            android:layout_height="40dp"
+            android:inputType="textShortMessage|textPersonName|textEmailSubject"
+            android:ems="10"
+            android:id="@+id/editText_email_recuperacao"
+            app:layout_constraintStart_toStartOf="parent"
+            android:importantForAutofill="yes"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+            app:layout_constraintHorizontal_bias="0.48"
+            android:layout_marginTop="48dp" app:layout_constraintTop_toBottomOf="@+id/label_recuperar"
+    />
 </android.support.constraint.ConstraintLayout>
