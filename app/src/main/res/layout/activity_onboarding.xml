@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_app"
+        tools:context=".activities.onboarding.OnboardingActivity">
+
+        <ImageView
+                android:layout_width="0dp"
+                android:layout_height="300dp"
+                android:background="@drawable/board_img_01"
+                android:id="@+id/img_imagem"
+                android:alpha="1"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+        <TextView
+                android:text="Titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:alpha="1"
+                android:id="@+id/txt_titulo" android:textSize="30sp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/img_imagem" android:textStyle="bold"/>
+
+        <ImageView
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:background="@drawable/boar_icon_01"
+                android:id="@+id/img_icone"
+                android:alpha="1"
+                app:layout_constraintTop_toBottomOf="@+id/txt_titulo" android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintHorizontal_bias="0.498"/>
+        <TextView
+                android:text="Texto descritivo de acordo com o board"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:alpha="1"
+                android:id="@+id/txt_descricao" android:layout_marginTop="35dp"
+                app:layout_constraintTop_toBottomOf="@+id/img_icone" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"/>
+        <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/esquerda"
+                android:id="@+id/esquerda"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+                android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"/>
+        <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/direita"
+                android:id="@+id/direita"
+                android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"/>
+        <ImageView
+                android:layout_width="@dimen/icon_page"
+                android:layout_height="@dimen/icon_page" app:srcCompat="@drawable/onboarding_pager_circle_icon"
+                android:id="@+id/icones_3"
+                android:layout_marginBottom="26dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+        <ImageView
+                android:layout_width="@dimen/icon_page"
+                android:layout_height="@dimen/icon_page" app:srcCompat="@drawable/onboarding_pager_round_icon"
+                android:id="@+id/icones_1"
+                android:layout_marginBottom="26dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/icones_2" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"/>
+        <ImageView
+                android:layout_width="@dimen/icon_page"
+                android:layout_height="@dimen/icon_page" app:srcCompat="@drawable/onboarding_pager_circle_icon"
+                android:id="@+id/icones_2"
+                android:layout_marginBottom="26dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/icones_3" android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"/>
+        <ImageView
+                android:layout_width="@dimen/icon_page"
+                android:layout_height="@dimen/icon_page" app:srcCompat="@drawable/onboarding_pager_circle_icon"
+                android:id="@+id/icones_4"
+                android:layout_marginBottom="26dp"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@+id/icones_3"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"/>
+        <ImageView
+                android:layout_width="@dimen/icon_page"
+                android:layout_height="@dimen/icon_page" app:srcCompat="@drawable/onboarding_pager_circle_icon"
+                android:id="@+id/icones_5"
+                android:layout_marginBottom="26dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/icones_4"/>
+
+    <Button
+            android:id="@+id/btn_pular"
+            android:text="Pular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/shape_go_button"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>
