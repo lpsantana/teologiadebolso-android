@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.perfil.EditarPerfilActivity"
+        android:background="@color/background_app">
+
+    <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:srcCompat="@drawable/shape_foto"
+            android:id="@+id/user_foto"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/button"
+            android:layout_weight="1"
+            android:background="@drawable/shape_editar_foto"
+            app:layout_constraintBottom_toBottomOf="@+id/user_foto"
+            app:layout_constraintEnd_toEndOf="@+id/user_foto"
+            app:layout_constraintTop_toTopOf="@+id/user_foto"
+            android:layout_marginTop="120dp"
+            android:layout_marginLeft="75dp"
+            app:layout_constraintStart_toStartOf="@+id/user_foto"/>
+
+        <EditText
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome"
+                android:maxLength="250"
+                android:maxLines="5"
+                android:background="@drawable/shape_button_form"
+                android:layout_marginBottom="5dp"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintTop_toBottomOf="@+id/user_foto"/>
+
+        <EditText
+                android:id="@+id/user_data_nascimento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/data_de_nascimento"
+                android:background="@drawable/shape_button_form"
+                android:layout_marginBottom="5dp"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/user_name"
+        />
+
+
+    <RadioGroup
+            android:id="@+id/radioSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/user_name">
+
+        <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@android:color/transparent"
+                android:background="@drawable/shape_male"
+                android:checked="true"/>
+
+
+        <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@android:color/transparent"
+                android:background="@drawable/shape_female"
+                android:layout_marginLeft="16dp"
+        />
+
+    </RadioGroup>
+
+        <EditText
+                android:id="@+id/user_bio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/bio"
+                android:background="@drawable/shape_button_form"
+                android:inputType="textPassword"
+                android:layout_marginBottom="5dp"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/user_data_nascimento" />
+
+        <EditText
+                android:id="@+id/user_localizacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_button_form"
+                android:hint="@string/localiza_o"
+                android:inputType="textPassword"
+                android:layout_marginBottom="5dp"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/user_bio" />
+
+</android.support.constraint.ConstraintLayout>
